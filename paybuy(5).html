@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Alexander Antyufeev | GGen Portoflio</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Montserrat, Arial, sans-serif;
+            background-image: url('https://i.imgur.com/IEd1BUi.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-sizing: border-box;
+            backdrop-filter: blur(6px);
+        }
+
+        .logo {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Кнопки */
+        .button {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.08);
+            padding: 12px 22px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        /* Наведение */
+        .button:hover {
+            background: #c98e44;
+            transform: scale(1.05);
+        }
+
+        .content {
+            min-height: calc(100vh - 80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .form-box {
+            width: 100%;
+            max-width: 600px;
+            background: rgba(0,0,0,0.45);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            backdrop-filter: blur(6px);
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-size: 14px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .btn-submit {
+            margin-top: 15px;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #6f6f6f; /* серый */
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .btn-submit:hover {
+            background: #c98e44; /* оранжевый */
+            transform: scale(1.03);
+        }
+
+        .messengers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .messengers label {
+            margin: 0;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Alexander Antyufeev | GGenman </div>
+
+    <div class="menu">
+        <a href="index(1).html" class="button">Главная</a>
+        <a href="projects(3).html" class="button">Мои проекты</a>
+        <a href="contacts(4).html" class="button">Контакты</a>
+    </div>
+</header>
+
+<div class="content">
+
+    <div class="form-box">
+
+        <h2>Оформление заявки</h2>
+
+        <label>Выбор услуги</label>
+        <select id="service" onchange="toggleForms()">
+            <option value="">-- выберите --</option>
+            <option value="tz">Видеомонтаж</option>
+            <option value="shoot">Видеосъёмка</option>
+        </select>
+
+        <!-- TZ -->
+        <div id="tzForm" class="hidden">
+
+            <label>ФИО</label>
+            <input type="text" class="req">
+
+            <label>Номер телефона</label>
+            <input type="tel" class="req">
+
+            <label>Мессенджеры</label>
+            <div class="messengers req-group">
+                <label><input type="checkbox"> Telegram</label>
+                <label><input type="checkbox"> Discord</label>
+                <label><input type="checkbox"> ВКонтакте</label>
+                <label><input type="checkbox"> Email</label>
+                <label><input type="checkbox"> Instagram</label>
+            </div>
+
+            <label>Дедлайн</label>
+            <input type="text" class="req">
+
+            <label>Краткое ТЗ</label>
+            <textarea class="req"></textarea>
+
+            <label>Дата (xx.xx.20xx)</label>
+            <input type="text" class="req">
+
+        </div>
+
+        <!-- SHOOT -->
+        <div id="shootForm" class="hidden">
+
+            <label>ФИО</label>
+            <input type="text" class="req">
+
+            <label>Номер телефона</label>
+            <input type="tel" class="req">
+
+            <label>Почта | Email</label>
+            <input type="email" class="req">
+
+            <label>Адрес</label>
+            <input type="text" class="req">
+
+            <label>Дата и время</label>
+            <input type="text" class="req">
+
+            <label>Мессенджеры</label>
+            <div class="messengers req-group">
+                <label><input type="checkbox"> Telegram</label>
+                <label><input type="checkbox"> Discord</label>
+                <label><input type="checkbox"> ВКонтакте</label>
+                <label><input type="checkbox"> Email</label>
+                <label><input type="checkbox"> Instagram</label>
+            </div>
+            <label>Дедлайн</label>
+            <input type="text" class="req">
+        </div>
+            <label>Согласие на обработку персональных данных</label>
+            <div class="messengers req-group">
+                <input type="checkbox" id="agree" name="agree" required>  
+        </div>
+        <button class="btn-submit" onclick="submitForm()">Заказать</button>
+        
+    </div>
+
+</div>
+
+<script>
+
+function toggleForms() {
+    document.getElementById('tzForm').classList.add('hidden');
+    document.getElementById('shootForm').classList.add('hidden');
+
+    const val = document.getElementById('service').value;
+
+    if (val === 'tz') {
+        document.getElementById('tzForm').classList.remove('hidden');
+    }
+
+    if (val === 'shoot') {
+        document.getElementById('shootForm').classList.remove('hidden');
+    }
+}
+
+function submitForm() {
+    const visibleForm = document.querySelector('.form-box div:not(.hidden)');
+    const inputs = visibleForm.querySelectorAll('.req input, .req textarea, .req input[type="text"], .req input[type="tel"], .req input[type="email"]');
+
+    for (let i = 0; i < inputs.length; i++) {
+        if (!inputs[i].value) {
+            alert("Заполните все поля");
+            return;
+        }
+    }
+
+    const checkboxes = visibleForm.querySelectorAll('.req-group input[type="checkbox"]');
+    let checked = false;
+
+    checkboxes.forEach(c => {
+        if (c.checked) checked = true;
+    });
+
+    if (!checked) {
+        alert("Выберите хотя бы один мессенджер");
+        return;
+    }
+
+    alert("Заявка успешно отправлена");
+}
+
+</script>
+
+</body>
+</html>

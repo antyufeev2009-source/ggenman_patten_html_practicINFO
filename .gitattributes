@@ -1,0 +1,4 @@
+R2.mp4 filter=lfs diff=lfs merge=lfs -text
+d1.mp4 filter=lfs diff=lfs merge=lfs -text
+PD_D1.mp4 filter=lfs diff=lfs merge=lfs -text
+PICK_D2.mp4 filter=lfs diff=lfs merge=lfs -text

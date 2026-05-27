@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Alexander Antyufeev | GGen Portoflio</title>
+    <style>
+        /* Общие настройки */
+        body {
+            margin: 0;
+            font-family: Montserrat, sans-serif;
+            background-image: url('https://i.imgur.com/IEd1BUi.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        /* Шапка сайта */
+        header {
+            width: 100%;
+            height: 80px;
+            background: rgba(0, 0, 0, 0.30);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-sizing: border-box;
+            backdrop-filter: blur(6px);
+        }
+        /* Название сайта */
+        .logo {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        /* Блок кнопок */
+        .menu {
+            display: flex;
+            gap: 15px;
+        }
+        /* Стили кнопок */
+        .button {
+            text-decoration: none;
+            color: white;
+            background: #b0aba2;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        /* Эффект наведения */
+        .button:hover {
+            background: #c98e44;
+            transform: scale(1.05);
+        }
+        /* Основной контент */
+        .content {
+            text-align: center;
+            margin-top: 120px;
+            color: orange;
+        }
+        /* Заголовок */
+        .content h1 {
+            font-size: 60px;
+            text-shadow: 0 0 2px black;
+            margin-bottom: 10px;
+        }
+	.p1 {
+    		font-size: 24px;
+    		color: orange;
+    		margin-bottom: 50px;
+    		font-family: Georgia, serif;
+        }
+        /* Контейнер карточек */
+        .contacts-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 35px;
+            padding: 0 40px 80px;
+        }
+        /* Карточка */
+        .contact-card {
+            width: 300px;
+            background: rgba(0, 0, 0, 0.40);
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+        .contact-card:hover {
+            transform: translateY(-8px);
+            background: rgba(0, 0, 0, 0.50);
+        }
+        /* Заголовок карточки */
+        .contact-card h2 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+        /* Текст */
+        .contact-card p {
+            color: #dddddd;
+            font-size: 17px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        /* Кнопка */
+        .contact-link {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: #a6a6a0;
+            padding: 12px 22px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .contact-link:hover {
+            background: #c98e44;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <!-- Логотип -->
+        <div class="logo">
+            Alexander Antyufeev | GGenman
+        </div>
+
+        <!-- Кнопки -->
+
+        <div class="menu">
+
+            <a href="index(1).html" class="button">
+                Главная
+            </a>
+
+            <a href="projects(3).html" class="button">
+                Мои проекты
+            </a>
+
+            <a href="paybuy(5).html" class="button">
+                Заказ
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- Контент -->
+
+    <div class="content">
+
+        <h1>Контакты</h1>
+
+        <p class="p1">
+            Здесь можно ознакомиться с моими соц.сетями: связаться или подписаться
+        </p>
+
+        <!-- Карточки -->
+
+        <div class="contacts-container">
+
+            <!-- Telegram аккаунт -->
+            <div class="contact-card">
+                <h2>Telegram</h2>
+                <p>
+                    Личный аккаунт для связи и
+                    обсуждения проектов.
+                </p>
+                <a href="https://t.me/ggenman"
+                   target="_blank"
+                   class="contact-link">
+                    Открыть аккаунт
+                </a>
+                <p>Требуется VPN</p>
+            </div>
+
+            <!-- Telegram канал -->
+            <div class="contact-card">
+                <h2>Telegram Канал</h2>
+                <p>
+                    Сборник видеоконтента,
+                    новостей и отзывов.
+                </p>
+                <a href="https://t.me/+a02Y_Ey4jKdhZDgy"
+                   target="_blank"
+                   class="contact-link">
+                    Открыть канал
+                </a>
+                <p>Требуется VPN</p>
+            </div>
+
+            <!-- VK -->
+            <div class="contact-card">
+                <h2>ВКонтакте</h2>
+                <p>
+                    Основной профиль VK
+                    для общения и публикаций.
+                </p>
+                <a href="https://vk.ru/ggenman"
+                   target="_blank"
+                   class="contact-link">
+                    Открыть аккаунт
+                </a>
+                <p>VPN не требуется</p>
+            </div>
+
+            <!-- Discord -->
+            <div class="contact-card">
+                <h2>Discord</h2>
+                <p>
+                    Личный аккаунт для связи и
+                    обсуждения проектов.
+                </p>
+                <a href="https://discord.com/invite/tdZVxKXp"
+                   target="_blank"
+                   class="contact-link">
+                    Открыть аккаунт
+                </a>
+                <p>Требуется VPN</p>
+            </div>
+
+            <!-- Почта -->
+            <div class="contact-card">
+                <h2>Email | Яндекс</h2>
+                <p>
+                    Корпоративная почта
+                    для заказов и сотрудничества.
+                </p>
+                <a href="ggenman@profsage.ru"
+                   class="contact-link">
+                    Написать письмо
+                </a>
+                <p>VPN не требуется</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
